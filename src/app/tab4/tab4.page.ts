@@ -37,16 +37,18 @@ export class Tab4Page implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ionViewDidEnter() {
+    this.loadingDatas = true;
 
     this.iframeUrl = this.iframeUrl + Date.now();
+
+    setTimeout(() => {
+      this.loadingDatas = false;
+    }, 1000);
 
   }
 
   ngOnInit(): void {
-    this.loadingDatas = true;
-    setTimeout(() => {
-      this.loadingDatas = false;
-    }, 1000);
+
   }
 
 }
