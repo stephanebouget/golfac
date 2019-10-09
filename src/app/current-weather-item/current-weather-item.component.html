@@ -1,4 +1,4 @@
-<div id="current-weather-item-comp" fxLayout="row" fxLayoutAlign="end center">
+<div id="current-weather-item-comp" fxLayout="row" fxLayoutAlign="start center">
   <!-- <div *ngIf="weather.hour" fxFlex="10" [innerHTML]="weather.date | sanitizeHtml" class="weather-item date"></div> -->
   <!-- <div *ngIf="!weather.hour" fxFlex="15" [innerHTML]="weather.date | sanitizeHtml" class="weather-item date"></div>
     <div *ngIf="weather.hour" fxFlex="20" [innerHTML]="weather.hour | sanitizeHtml" class="weather-item hour"></div>
@@ -14,13 +14,14 @@
         <div [innerHTML]="weather.gust | sanitizeHtml" class="weather-item gust"></div>
     </div> -->
   <!-- <div [innerHTML]="weather.wet | sanitizeHtml" class="weather-item wet"></div>   -->
-  <div fxLayout="column" fxLayoutAlign="start center">
+  <div [innerHTML]="weather && weather.icon | sanitizeHtml" class="weather-item icon"></div>
+
+  <div fxFlex fxLayout="column" fxLayoutAlign="start start">
     En ce moment
   </div>
-  <div [innerHTML]="weather.icon | sanitizeHtml" class="weather-item icon"></div>
 
   <div fxLayout="column" fxLayoutAlign="start center">
-      <div *ngIf="weather.temp" [innerHTML]="weather && weather.temp | sanitizeHtml" class="weather-item temp"></div>
+      <div *ngIf="weather" [innerHTML]="weather && weather.temp | sanitizeHtml" class="weather-item temp"></div>
 
     <!-- <div fxFlex="10" [innerHTML]="weather.wind | sanitizeHtml" class="weather-item wind"></div> -->
 

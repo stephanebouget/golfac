@@ -35,7 +35,7 @@ export class AppComponent {
       // this.statusBar.overlaysWebView(true);
 
       // set status bar to white
-      this.statusBar.backgroundColorByHexString('#464858');
+      this.statusBar.backgroundColorByHexString('#061743');
     });
   }
 }

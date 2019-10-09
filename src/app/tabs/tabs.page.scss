@@ -4,4 +4,24 @@ ion-tab-bar {
     
     border-top-left-radius: 36px;
     border-top-right-radius: 36px;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+ion-label{
+    margin: 0;
+    margin-left: 6px;
+    margin-top: 3px;
+    min-width: 60px;
+}
+
+ion-tab-button{
+    ion-label{
+        display: none;
+    }
+}
+ion-tab-button.tab-selected{
+    ion-label{
+        display: block;
+        
+    }
 }
