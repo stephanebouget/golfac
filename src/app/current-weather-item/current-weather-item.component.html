@@ -20,7 +20,7 @@
   <div [innerHTML]="weather.icon | sanitizeHtml" class="weather-item icon"></div>
 
   <div fxLayout="column" fxLayoutAlign="start center">
-      <div [innerHTML]="weather.temp | sanitizeHtml" class="weather-item temp"></div>
+      <div *ngIf="weather.temp" [innerHTML]="weather && weather.temp | sanitizeHtml" class="weather-item temp"></div>
 
     <!-- <div fxFlex="10" [innerHTML]="weather.wind | sanitizeHtml" class="weather-item wind"></div> -->
 

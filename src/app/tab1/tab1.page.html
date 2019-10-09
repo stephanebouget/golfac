@@ -7,11 +7,10 @@
       Météo Saint Samson
     </ion-title>
   </ion-toolbar>
-  <ion-toolbar id="current-weather-item-container" class="toolbar-top" color="secondary"  no-margin no-padding>
-    <app-current-weather-item *ngIf="!loadingDatas" [weather]="weathers[0]"></app-current-weather-item>
-    <div fxLayout="column" fxFlexFill fxLayoutAlign="center center" *ngIf="loadingDatas">
-        <mat-spinner diameter="40" mode="indeterminate" color="primary"></mat-spinner>
-      </div>
+  <ion-toolbar  class="toolbar-top" color="secondary" no-margin no-padding>
+    <div id="current-weather-item-container">
+      <app-current-weather-item  [weather]="weathers && weathers[0]"></app-current-weather-item>
+    </div>
   </ion-toolbar>
   <ion-toolbar color="primary" no-margin no-padding>
     <div fxLayout="row" fxLayoutAlign="start center" id="header-legend">
