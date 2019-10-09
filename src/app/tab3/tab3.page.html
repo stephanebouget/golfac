@@ -1,0 +1,7 @@
+<ion-content fxFlexFill overflow-scroll="true">
+  <div fxLayout="column" fxFlexFill fxLayoutAlign="center center" *ngIf="loadingDatas">
+    <mat-spinner diameter="40" mode="indeterminate" color="primary"></mat-spinner>
+  </div>
+  <iframe fxFlexFill [hidden]="loadingDatas" [src]="sanitizer.bypassSecurityTrustResourceUrl(iframeUrl)"></iframe>
+
+</ion-content>

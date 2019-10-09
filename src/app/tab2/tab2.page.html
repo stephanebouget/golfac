@@ -1,0 +1,52 @@
+<ion-header no-border>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Météo 7 Jours
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="secondary">
+    <div fxLayout="row" fxLayoutAlign="start center" id="header-legend">
+      <div fxFlex="26" class="empty"></div>
+      <div fxFlex="13" class="weather-item temp">
+        t°
+        <!-- <ion-icon name="thermometer"></ion-icon> -->
+        <!-- <i class="wi wi-thermometer-exterior"></i> -->
+      </div>
+      <div fxFlex="12" class="weather-item cloudiness">
+        Neb
+        <!-- <i class="wi wi-windy"></i> -->
+
+      </div>
+      <div fxFlex="10" class="weather-item rain">
+          <!-- <i class="wi wi-humidity"></i> -->
+          Proba Pluie
+      </div>
+      <div fxFlex="10" class="weather-item rainQuantity">
+          <!-- <i class="wi wi-raindrop"></i> -->
+          Quant pluie
+
+      </div>
+      <div fxFlex="10" class="weather-item wind">
+          <!-- <i class="wi wi-small-craft-advisory"></i> -->
+          Vent
+
+      </div>
+      <div fxFlex="15" class="weather-item windSpeed">
+          <!-- <i class="wi wi-strong-wind"></i> -->
+          Moy Rafales
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div fxLayout="column" fxFlexFill fxLayoutAlign="center center" *ngIf="loadingDatas">
+    <mat-spinner diameter="40" mode="indeterminate" color="primary"></mat-spinner>
+  </div>
+  <ion-list *ngIf="!loadingDatas" lines="none" id="weather-list">
+    <ul fxLayout="column">
+      <li *ngFor="let weather of weathers; let i = index">
+        <app-weather-item [weather]="weather"></app-weather-item>
+      </li>
+    </ul>
+  </ion-list>
+</ion-content>

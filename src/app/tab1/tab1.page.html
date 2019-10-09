@@ -1,0 +1,41 @@
+<ion-header no-border>
+  <ion-toolbar class="toolbar-top" color="secondary">
+    <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+    <ion-title>
+      Météo Saint Samson
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar id="current-weather-item-container" class="toolbar-top" color="secondary">
+    <app-current-weather-item *ngIf="!loadingDatas" [weather]="weathers[0]"></app-current-weather-item>
+    <div fxLayout="column" fxFlexFill fxLayoutAlign="center center" *ngIf="loadingDatas">
+        <mat-spinner diameter="40" mode="indeterminate" color="primary"></mat-spinner>
+      </div>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <div fxLayout="row" fxLayoutAlign="start center" id="header-legend">
+      <div fxFlex="26" class="empty"></div>
+      <div fxFlex="13" class="weather-item temp">t°</div>
+      <div fxFlex="12" class="weather-item cloudiness">Neb</div>
+      <div fxFlex="10" class="weather-item rain">Proba Pluie</div>
+      <div fxFlex="10" class="weather-item rainQuantity">Quant pluie</div>
+      <div fxFlex="10" class="weather-item wind">Vent</div>
+      <div fxFlex="15" class="weather-item windSpeed">Moy Rafales</div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div fxLayout="column" fxFlexFill fxLayoutAlign="center center" *ngIf="loadingDatas">
+    <mat-spinner diameter="40" mode="indeterminate" color="primary"></mat-spinner>
+  </div>
+  <ion-list *ngIf="!loadingDatas" lines="none" id="weather-list">
+    <ul fxLayout="column">
+      <li *ngFor="let weather of weathers; let i = index" [ngClass]="{'end-day': weather.isEndDay === true}">
+        <div class="item-header" fxLayout="row" *ngIf="weather.isNewDay" [innerHTML]="weather.date | sanitizeHtml">
+        </div>
+        <app-weather-item [weather]="weather"></app-weather-item>
+      </li>
+    </ul>
+  </ion-list>
+</ion-content>
