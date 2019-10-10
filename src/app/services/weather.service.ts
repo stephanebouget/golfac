@@ -23,7 +23,7 @@ export class WeatherService {
   constructor(public http: HttpClient, private config: ConfigService) {}
 
   getWeather() {
-    const url = this.config.urlAPI + 'communeStore=Pleumeur-Bodou%20(22560)&heure&commune=Pleumeur-Bodou+(22560)';
+    const url = this.config.urlAPI + 'communeStore=Pleumeur-Bodou%20(22560)&heure&commune=Pleumeur-Bodou+(22560)&' + Date.now();
 
     let params;
 
@@ -79,7 +79,7 @@ export class WeatherService {
 
 
   getWeatherDay() {
-    const url = this.config.urlAPI + 'communeStore=Pleumeur-Bodou%20(22560)&commune=Pleumeur-Bodou+(22560)';
+    const url = this.config.urlAPI + 'communeStore=Pleumeur-Bodou%20(22560)&commune=Pleumeur-Bodou+(22560)&' + Date.now();
 
     let params;
 

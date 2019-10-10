@@ -39,6 +39,10 @@ export class Tab1Page implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
 
+  }
+
+  ionViewDidEnter(): void {
+
     // let str;
     // for (let i = 0; i <= 100; i++) {
     //   if (i < 10) {

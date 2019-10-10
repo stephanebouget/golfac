@@ -4,6 +4,9 @@ import {
   OnDestroy,
   AfterViewInit
 } from '@angular/core';
+import {
+  DomSanitizer
+} from '@angular/platform-browser';
 
 import {
   Platform,
@@ -19,8 +22,9 @@ export class Tab5Page implements OnInit, OnDestroy, AfterViewInit {
   subscription: any;
   loadingDatas = false;
   backButtonSubscription;
+  iframeUrl = 'https://www.meteociel.fr/cartes_obs/radar/lastradar_no.gif?';
 
-  constructor(private platform: Platform) {}
+  constructor(private platform: Platform, public sanitizer: DomSanitizer) {}
 
   ngAfterViewInit() {
     this.backButtonSubscription = this.platform.backButton.subscribe(() => {
@@ -32,11 +36,18 @@ export class Tab5Page implements OnInit, OnDestroy, AfterViewInit {
     this.backButtonSubscription.unsubscribe();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ionViewDidEnter() {
     this.loadingDatas = true;
+
+    this.iframeUrl = this.iframeUrl + Date.now();
+    console.log("TCL: Tab4Page -> ionViewDidEnter -> this.iframeUrl", this.iframeUrl)
+
     setTimeout(() => {
       this.loadingDatas = false;
     }, 1000);
+
   }
 
 }

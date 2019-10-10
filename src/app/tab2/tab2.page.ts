@@ -41,7 +41,7 @@ export class Tab2Page implements OnInit, OnDestroy, AfterViewInit {
   }
 
 
-  ngOnInit(): void {
+  ionViewDidEnter(): void {
 
     this.loadingDatas = true;
 
@@ -51,6 +51,10 @@ export class Tab2Page implements OnInit, OnDestroy, AfterViewInit {
         this.loadingDatas = false;
       }, 100);
     });
+  }
+
+  ngOnInit(): void {
+
   }
 
 }

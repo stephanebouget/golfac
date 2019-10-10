@@ -4,6 +4,6 @@
   </div>
   <!-- <iframe fxFlexFill [hidden]="loadingDatas"
     src="http://www.meteo60.fr/radars/animation-radar-france.gif"></iframe> -->
-  <iframe fxFlexFill [hidden]="loadingDatas"
-    src="https://www.meteociel.fr/cartes_obs/radar/lastradar_no.gif"></iframe>
+  <iframe fxFlexFill [hidden]="loadingDatas"  [src]="sanitizer.bypassSecurityTrustResourceUrl(iframeUrl)"
+    ></iframe>
 </ion-content>

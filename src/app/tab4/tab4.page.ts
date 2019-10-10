@@ -5,7 +5,9 @@ import {
   AfterViewInit
 } from '@angular/core';
 
-import { DomSanitizer } from '@angular/platform-browser';
+import {
+  DomSanitizer
+} from '@angular/platform-browser';
 
 import {
   Platform,
@@ -40,6 +42,7 @@ export class Tab4Page implements OnInit, OnDestroy, AfterViewInit {
     this.loadingDatas = true;
 
     this.iframeUrl = this.iframeUrl + Date.now();
+    console.log("TCL: Tab4Page -> ionViewDidEnter -> this.iframeUrl", this.iframeUrl)
 
     setTimeout(() => {
       this.loadingDatas = false;
