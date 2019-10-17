@@ -12,11 +12,13 @@ import {
   StatusBar
 } from '@ionic-native/status-bar/ngx';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+
 
   constructor(
     private platform: Platform,
@@ -30,12 +32,13 @@ export class AppComponent {
     this.platform.ready().then(() => {
       // this.statusBar.styleDefault();
       // this.statusBar.styleBlackTranslucent();
-      // this.splashScreen.hide();
+      this.splashScreen.hide();
       // let status bar overlay webview
       // this.statusBar.overlaysWebView(true);
 
       // set status bar to white
       this.statusBar.backgroundColorByHexString('#061743');
+
     });
   }
 }

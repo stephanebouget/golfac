@@ -29,12 +29,10 @@ export class Tab1Page implements OnInit, OnDestroy, AfterViewInit {
     this.backButtonSubscription = this.platform.backButton.subscribe(() => {
       navigator['app'].exitApp();
     });
-
   }
 
   ngOnDestroy() {
     this.backButtonSubscription.unsubscribe();
-
   }
 
   ngOnInit(): void {

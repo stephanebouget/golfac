@@ -1,27 +1,87 @@
 ion-tab-bar {
     // box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5) !important;
     border: none;
-    
+
     border-top-left-radius: 36px;
     border-top-right-radius: 36px;
     box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1) !important;
 }
 
-ion-label{
+ion-label {
     margin: 0;
     margin-left: 6px;
     margin-top: 3px;
     min-width: 60px;
 }
 
-ion-tab-button{
-    ion-label{
+ion-tab-button {
+    ion-label {
         display: none;
     }
 }
-ion-tab-button.tab-selected{
-    ion-label{
+
+ion-tab-button.tab-selected {
+    ion-label {
         display: block;
-        
+
+    }
+}
+
+#splashscreen {
+    #splash-overlay {
+        background: url('./../../assets/img/splash-overlay.png');
+        position: absolute;
+        z-index: 3;
+        background-size: cover;
+    }
+
+    img {
+        display: block;
+        max-width: 1000%;
+        max-height: 100%;
+        width: auto;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    img.gif-1 {
+        right: -350px;
+    }
+
+    img.gif-2 {
+        right: -50px;
+    }
+
+    img.gif-3 {
+        right: -76px;
+    }
+
+    img.gif-4 {
+        right: -325px;
+    }
+
+    img.gif-5 {
+        right: -218px;
+    }
+
+    img.gif-6 {
+        right: -471px;
+    }
+
+    img.gif-7 {
+        right: -555px;
+    }
+
+    img.gif-8 {
+        right: -106px;
+    }
+
+    img.gif-9 {
+        right: -350px;
+    }
+
+    img.gif-10 {
+        right: -200px;
     }
 }

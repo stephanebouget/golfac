@@ -1,4 +1,4 @@
-<ion-tabs no-border (ionSelect)="tabChanged($event)">
+<ion-tabs no-border (ionSelect)="tabChanged($event)" [hidden]="loadingGif">
 
   <ion-tab-bar slot="bottom" color="primary-contrast">
     <!-- <div id="ion-tabs-wrapper"> -->
@@ -30,3 +30,7 @@
   </ion-tab-bar>
 
 </ion-tabs>
+<div [hidden]="!loadingGif" id="splashscreen" fxFlexFill>
+  <div fxFlexFill id="splash-overlay"></div>
+  <img   src="{{iframeUrl}}" ngClass="gif-{{randGif}}"/>
+</div>
