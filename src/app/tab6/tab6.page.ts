@@ -23,7 +23,7 @@ export class Tab6Page implements OnInit, OnDestroy, AfterViewInit {
   subscription: any;
   loadingDatas = false;
   backButtonSubscription;
-  iframeUrl = 'https://delphinecoiffure.000webhostapp.com/gac.php?';
+  iframeUrl = 'https://delphinecoiffure.000webhostapp.com/gac-tv.php?';
 
 
   
