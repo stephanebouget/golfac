@@ -43,6 +43,12 @@ const routes: Routes = [{
           path: '',
           loadChildren: '../tab5/tab5.module#Tab5PageModule'
         }]
+      }, {
+        path: 'tab6',
+        children: [{
+          path: '',
+          loadChildren: '../tab6/tab6.module#Tab6PageModule'
+        }]
       },
       {
         path: '',

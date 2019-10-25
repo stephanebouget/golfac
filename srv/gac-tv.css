@@ -1,0 +1,35 @@
+.timeNavigation,
+.singleBroadcastCard-arrow {
+    display: none !important;
+}
+
+header,
+footer {
+    display: none !important;
+}
+
+.gridChannel-description,
+.gridChannel-rightColumn,
+.singleBroadcastCard-imageWrapper,
+.linksBooster,
+.footer-prismashop {
+    display: none !important;
+}
+
+img:last-child {
+    display: none !important;
+}
+
+.gridChannel-titleWrapper {
+    background: #474851 !important;
+    padding: 20px !important;
+}
+
+.gridChannel-titleWrapper .pictureTagGenerator {
+    display: none !important;
+}
+
+.gridChannel-titleWrapper span {
+    font-size: 1.3em !important;
+    color: #aaadca !important;
+}
