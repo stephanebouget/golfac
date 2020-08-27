@@ -19,7 +19,7 @@ npm-debug.log*
 .tmp/
 .versions/
 coverage/
-www/
+# www/ for web version heroku
 node_modules/
 platforms/
 tmp/
